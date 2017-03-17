@@ -24,6 +24,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   -->
   <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
 
+  <link rel="stylesheet" href="dist/css/mystyle.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -278,24 +279,37 @@ desired effect
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Page Header
-        <small>Optional description</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
-      </ol>
-    </section>
+    <div class="container-fluid ">
+      <ul class="nav nav-tabs marginBottom" id="myTab">
+        <li class="active "><a href="#home" class="backgroundRed">Inbox </a>
 
-    <!-- Main content -->
-    <section class="content">
+        </li>
+        <li><a href="#profile"><button class="close closeTab" type="button" >×</button>Sent</a>
 
-      <!-- Your Page Content Here -->
+        </li>
+        <li><a href="#messages"><button class="close closeTab" type="button" >×</button>Compose</a>
 
-    </section>
-    <!-- /.content -->
+        </li>
+        <li><a href="#settings"><button class="close closeTab" type="button" >×</button> Re:this is test subject</a>
+
+        </li>
+      </ul>
+      <div>
+        <div class="operationDiv">
+          <button type="submit" class="btn" id="composeButton">Compose</button>
+        </div>
+      </div>
+      <div class="row-fluid ">
+        <div class="row-fluid ">
+          <div class="tab-content span4">
+            <div class="tab-pane active" id="home">Inbox</div>
+            <div class="tab-pane" id="profile">sent</div>
+            <div class="tab-pane" id="messages">Compose1</div>
+            <div class="tab-pane" id="settings">Re:This is test</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <!-- /.content-wrapper -->
 
@@ -396,6 +410,8 @@ desired effect
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/app.min.js"></script>
+
+<script src="dist/js/tabs.js"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
