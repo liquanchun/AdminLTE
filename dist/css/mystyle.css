@@ -16,3 +16,9 @@
     background-color: #E6E6E6;
     border-right: 2px solid #BFBFBF;
 }
+.content-wrapper .container-fluid{padding: 0px;}
+.container-fluid .nav-tabs>li>a{line-height: 1.128571;}
+.wrapper .main-footer{padding: 6px 15px;}
+.row-fluid{background-color: whitesmoke;}
+.bootstrap-table thead th .th-inner {padding: 4px 3px;background-color: #a7cfff ;}
+.bootstrap-table table tbody tr>td {line-height: 1.36;background-color: rgba(167,207,255,0) ;}

@@ -22,16 +22,16 @@ $(function () {
 //this method will demonstrate how to add tab dynamically
 function registerComposeButtonEvent() {
     /* just for this demo */
-    $('#composeButton').click(function (e) {
+    $('.linka').click(function (e) {
         e.preventDefault();
 
         var tabId = "compose" + composeCount; //this is id on tab content div where the
         composeCount = composeCount + 1; //increment compose count
 
-        $('.nav-tabs').append('<li><a href="#' + tabId + '"><button class="close closeTab" type="button" >×</button>Compose</a></li>');
-        $('.tab-content').append('<div class="tab-pane" id="' + tabId + '"></div>');
+        $('.content-wrapper .nav-tabs').append('<li><a href="#' + tabId + '"><button class="close closeTab" type="button" >×</button>'+ $(this).text() +'</a></li>');
+        $('.content-wrapper .tab-content').append('<div class="tab-pane" id="' + tabId + '"></div>');
 
-        craeteNewTabAndLoadUrl("", "./SamplePage.html", "#" + tabId);
+        craeteNewTabAndLoadUrl("", $(this).attr("page"), "#" + tabId);
 
         $(this).tab('show');
         showTab(tabId);
